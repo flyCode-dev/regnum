@@ -8,8 +8,9 @@ const endSymbol = '$';
  * @return {Type}
  */
 export default function (input, RegnumExpresson, map) {
-  let newMap = [];
+
   let keys = Object.keys(map);
+
   keys = keys.map(key => {
     let keyword = startSymbol + key + endSymbol;
     return {
@@ -17,12 +18,17 @@ export default function (input, RegnumExpresson, map) {
       index: RegnumExpresson.indexOf(keyword)
     };
   });
+
   keys = _.omit(keys, {index: -1});
   keys = _.sortBy(keys, 'index');
-  _.each(keys, key => {
-    let keyword = startSymbol + key + endSymbol;
-    RegnumExpresson = RegnumExpresson.replace(keyword, map[key]);
+
+  _.each(keys, o => {
+    let keyword = startSymbol + o.key + endSymbol;
+    RegnumExpresson = RegnumExpresson.replace(keyword, map[o.key]);
   });
-  console.log(RegnumExpresson);
-  return newMap
+
+  let matchedArray = input.match(RegnumExpresson);
+  console.log(matchedArray);
+
+  return matchedArray;
 }

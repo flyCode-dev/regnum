@@ -7,10 +7,10 @@ const endSymbol = '$';
  * @param {Type}
  * @return {Type}
  */
-export default function (input, RegnumExpresson, map) {
+export default function (input, RegnumExpresson, map, options) {
+  let output = {};
 
   let keys = Object.keys(map);
-
   keys = keys.map(key => {
     let keyword = startSymbol + key + endSymbol;
     return {
@@ -27,8 +27,13 @@ export default function (input, RegnumExpresson, map) {
     RegnumExpresson = RegnumExpresson.replace(keyword, map[o.key]);
   });
 
-  let matchedArray = input.match(RegnumExpresson);
-  console.log(matchedArray);
+  let matchedArray = input.match(new RegExp(RegnumExpresson, options));
 
-  return matchedArray;
+  matchedArray = matchedArray.length && matchedArray.splice(0, 1);
+
+  _.each(keys, (o, index) => {
+    output[o.key] = matchedArray[index];
+  });
+
+  return output;
 }

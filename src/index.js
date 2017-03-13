@@ -1,11 +1,16 @@
 import _ from 'lodash';
+let debug = false;
 
 const startSymbol = '$';
 const endSymbol = '$';
 
 /**
- * @param {Type}
- * @return {Type}
+ *
+ * @param input
+ * @param RegnumExpresson
+ * @param map
+ * @param options
+ * @returns {{}}
  */
 export default function (input, RegnumExpresson, map, options) {
   let output = {};
@@ -29,11 +34,20 @@ export default function (input, RegnumExpresson, map, options) {
 
   let matchedArray = input.match(new RegExp(RegnumExpresson, options));
 
-  matchedArray = matchedArray.length && matchedArray.splice(0, 1);
+  if (debug) {
+    console.log('Input            ====>', input);
+    console.log('Result           ====>', matchedArray);
+    console.log('Compiled RegExp  ====>', RegnumExpresson);
+    console.log('Options          ====>', options);
+  }
 
-  _.each(keys, (o, index) => {
-    output[o.key] = matchedArray[index];
-  });
+  if (matchedArray && matchedArray.length) {
+    matchedArray.splice(0, 1);
+    _.each(keys, (o, index) => {
+      output[o.key] = matchedArray[index];
+    });
+  }
+
 
   return output;
 }

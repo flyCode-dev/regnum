@@ -4,6 +4,11 @@ let debug = false;
 const startSymbol = '$';
 const endSymbol = '$';
 
+
+String.prototype.regnumMatch = function () {
+  this.match.apply(arguments);
+};
+
 /**
  *
  * @param input

@@ -12,7 +12,6 @@ export default class regnum {
     this.endSymbol = '$';
     this.expression = expression;
     this.map = map;
-    this.map = map;
     this.options = options;
     this.debug = false;
   }

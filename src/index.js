@@ -1,5 +1,4 @@
 import _ from 'lodash';
-let debug = false;
 
 export default class regnum {
   /**
@@ -15,6 +14,7 @@ export default class regnum {
     this.map = map;
     this.map = map;
     this.options = options;
+    this.debug = false;
   }
 
   getRegExp() {
@@ -42,10 +42,10 @@ export default class regnum {
     let output = {};
     let matchedArray = input.match(this.getRegExp());
 
-    if (debug) {
+    if (this.debug) {
       console.log('Input            ====>', input);
       console.log('Result           ====>', matchedArray);
-      console.log('Compiled RegExp  ====>', expression);
+      console.log('Compiled RegExp  ====>', this.expression);
       console.log('Options          ====>', this.options);
     }
 

@@ -35,7 +35,9 @@
 ![Regnum Logo](https://user-images.githubusercontent.com/8617379/35767656-e040c374-0909-11e8-98d4-4db09f25a58d.png)
 
 <p align="center"><big>
-Alternative Lib for regular expressions.
+Alternative Lib for regular expressions. 
+
+Instead of getting array get an object with keys you specify. See `Usage` section.
 </big></p>
 
 
@@ -61,7 +63,7 @@ matchedObject = regnum.match('bender@ilovebender.com');
 
 ```
 Result of `matchedObject` is 
-```json
+```js
 {
     username: 'bender',
     domain: 'ilovebender',
@@ -77,7 +79,7 @@ Simply run
 npm test
 ```
 ## Examples
-More examples of usage are provided in './Test' folder.
+More examples of usage are provided in `./test` folder.
 
 ## Contribution
 Contribution is welcome.

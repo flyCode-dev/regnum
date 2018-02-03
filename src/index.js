@@ -17,8 +17,8 @@ export default class regnum {
   }
 
   getRegExp() {
-    this.keys = Object.keys(this.map);
-    this.keys = this.keys.map(key => {
+    this.keys = _.keys(this.map);
+    this.keys = _.map(this.keys, key => {
       let keyword = this.startSymbol + key + this.endSymbol;
       return {
         key,

@@ -1,4 +1,4 @@
-<big><h1 align="center">regnum</h1></big>
+<big><h1 align="center">Regnum</h1></big>
 
 <p align="center">
   <a href="https://npmjs.org/package/regnum">
@@ -40,20 +40,51 @@ Alternative Lib for regular expressions.
 ## Install
 
 ```sh
-npm i -D regnum
+npm install --save regnum
 ```
 
 ## Usage
 
 ```js
-import regnum from "regnum"
+import Regnum from "regnum"
 
-regnum() // true
+regnumObject = {
+    username: '[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+',
+    domain: '[a-zA-Z0-9-]+',
+    zone: '(?:\.[a-zA-Z0-9-]+)*'
+};
+
+regnum = new Regnum('^($username$)@($domain$)($zone$)$', regnumObject);
+matchedObject = regnum.match('bender@ilovebender.com');
+
+```
+Result of `matchedObject` is 
+```json
+{
+    username: 'bender',
+    domain: 'ilovebender',
+    zone: '.com'
+}
 ```
 
+## Test
+
+Simply run 
+
+```sh
+npm test
+```
+## Examples
+More examples of usage are provided in './Test' folder.
+
+## Contribution
+Contribution is welcome.
+
+## Dependencies
+`lodash` is the only dependency to this package.
 ## License
 
-MIT © [Rouben Shekspir](http://fly.co.de)
+MIT © [Flycode LLC](http://fly.co.de)
 
 [npm-url]: https://npmjs.org/package/regnum
 [npm-image]: https://img.shields.io/npm/v/regnum.svg?style=flat-square

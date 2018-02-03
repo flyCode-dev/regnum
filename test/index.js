@@ -27,6 +27,7 @@ test('regnum', (t) => {
     domain: '[a-zA-Z0-9-]+',
     zone: '(?:\.[a-zA-Z0-9-]+)*'
   };
+
   regnum = new Regnum('^($username$)@($domain$)($zone$)$', regnumObject);
   t.deepEqual({
     username: 'bender',
@@ -34,4 +35,18 @@ test('regnum', (t) => {
     zone: '.com'
   }, regnum.match('bender@ilovebender.com'), 'matching with email');
 
+
+  regnumObject = {
+    number: '[0-9]*',
+    name: {
+      value: '[a-zA-Z]*',
+      match: 'first',
+    }
+  };
+
+  regnum = new Regnum(regnumObject);
+  t.deepEqual({
+    name: 'Bender',
+    number: '22'
+  }, regnum.match('Bender Bending Rodríguez designated in-universe as Bending Unit 22'), '2 object return test');
 });

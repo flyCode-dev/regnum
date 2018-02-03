@@ -61,7 +61,7 @@ matchedObject = regnum.match('bender@ilovebender.com');
 
 ```
 Result of `matchedObject` is 
-```json
+```js
 {
     username: 'bender',
     domain: 'ilovebender',

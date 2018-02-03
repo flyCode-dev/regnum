@@ -1,34 +1,16 @@
 <big><h1 align="center">Regnum</h1></big>
 
 <p align="center">
-  <a href="https://npmjs.org/package/regnum">
-    <img src="https://img.shields.io/npm/v/regnum.svg?style=flat-square"
-         alt="NPM Version">
-  </a>
-
-  <a href="https://coveralls.io/r/flyCode-dev/regnum">
-    <img src="https://img.shields.io/coveralls/flyCode-dev/regnum.svg?style=flat-square"
-         alt="Coverage Status">
-  </a>
-
-  <a href="https://travis-ci.org/flyCode-dev/regnum">
-    <img src="https://img.shields.io/travis/flyCode-dev/regnum.svg?style=flat-square"
-         alt="Build Status">
-  </a>
-
-  <a href="https://npmjs.org/package/regnum">
-    <img src="http://img.shields.io/npm/dm/regnum.svg?style=flat-square"
-         alt="Downloads">
+  <a href="https://www.npmjs.com/package/regnum">
+    <img src="http://img.shields.io/npm/dm/regnum.svg?style=flat-square" alt="Downloads">
   </a>
 
   <a href="https://david-dm.org/flyCode-dev/regnum.svg">
-    <img src="https://david-dm.org/flyCode-dev/regnum.svg?style=flat-square"
-         alt="Dependency Status">
+    <img src="https://david-dm.org/flyCode-dev/regnum.svg?style=flat-square" alt="Dependency Status">
   </a>
 
   <a href="https://github.com/flyCode-dev/regnum/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/regnum.svg?style=flat-square"
-         alt="License">
+    <img src="https://img.shields.io/npm/l/regnum.svg?style=flat-square" alt="License">
   </a>
 </p>
 

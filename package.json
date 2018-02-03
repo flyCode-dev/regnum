@@ -1,5 +1,5 @@
 {
-  "name": "@flycode-dev/regnum",
+  "name": "regnum",
   "version": "1.0.0",
   "description": "Alternative way to do regular expressions.",
   "main": "dist/index.js",

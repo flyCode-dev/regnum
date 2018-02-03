@@ -32,6 +32,8 @@
   </a>
 </p>
 
+![Regnum Logo](https://user-images.githubusercontent.com/8617379/35767656-e040c374-0909-11e8-98d4-4db09f25a58d.png)
+
 <p align="center"><big>
 Alternative Lib for regular expressions.
 </big></p>
